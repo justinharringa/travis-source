@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 . ${TRAVIS_BUILD_DIR}/.travis.gpg.sh
 
 set -ex
