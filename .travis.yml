@@ -2,15 +2,17 @@ language: java
 jdk: oraclejdk8
 sudo: required
 group: deprecated-2017Q2
-
 services:
-  - docker
+- docker
 cache:
   directories:
-  - $HOME/.m2/repository
+  - "$HOME/.m2/repository"
 deploy:
   provider: script
   script: sh $TRAVIS_BUILD_DIR/.travis.deploy.sh
   skip_cleanup: true
   on:
     branch: master
+env:
+  global:
+    secure: L2o3QI/6+XnYqydwtHCDL4lQsU5oF6F8bz53nROJqTPSNZsqrSKDa/H1wFKL+qWPYX3OeaOhVzhM3ygoux4bTF7TFNZWyf9w6VWgtHiOzwxg76i0opXBmJ5Q1U5t+v8hquq8+EKXbdrS1CsfYzVUaJJkNGWZVvTdEe9P6H1DTnPf22fdIXYO3DP83iqZ/BX/MsdgMlysXTsjzf6/HU2Zp0z23RjUqVDFL+bOeGnhr6cLmd5gGDTvjqdE7ywMkLo8CuQKF5CazJUTnTpRkq6+SAxa9L/WYVNXswm7toPkSXsO8nCj3S3BpjDuq84+jcNjny9joX/k+MgHt159ef22rHYpez2E3tRL7gjj7Xcv0PY0dlUbvcnLSXilbKhPJYxOvmW4SCxhCMBEQ4qjLI23H7ZtopR1HhrGAQN7bx/aKXCxgJzFdE2B6+bBRwFv+x4y5U/AZGABvUTOIHdo0glrM5UP6QzPt5aP6a7WUR6See43bn51LNFFU0NSJbSelJvOflrXpJtaQZCPk1/ESZiZNdoeRBAzFuwxRXf/5vl7s3BD1SwpMOGJ/VzoJX6FfUlKalDoTnp8u/KzcrbL+YVgRjJDf/Lj/UkL31ylnmfLvbEIIphaI7W/OkpkNZchikY+wNgzrm63wvXAn5BLxMaKxMr2iR9SRuhJxBZJ/jBx9H0=
