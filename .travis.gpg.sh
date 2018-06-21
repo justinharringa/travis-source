@@ -7,4 +7,5 @@ if [ ! -z "$TRAVIS" && ! -z "$GPG_NAME" ]; then
     echo "I see ${TRAVIS} and ${GPG_NAME}!"
 else
     echo "No! I don't see it!"
+    exit 1
 fi
